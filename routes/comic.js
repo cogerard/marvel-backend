@@ -11,7 +11,7 @@ router.get("/comics", async (req, res) => {
       endOfUrl = endOfUrl + "&title=" + req.query.title;
     }
     if (req.query.page) {
-      let skip = 100 * req.query.page;
+      let skip = 100 * (req.query.page - 1);
       endOfUrl = endOfUrl + "&skip=" + skip;
     }
     const response = await axios
