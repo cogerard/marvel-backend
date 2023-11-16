@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-app.use(express.json());
+// app.use(express.json());
 app.use(cors());
 
 // const userRoutes = require("./routes/user");
@@ -19,5 +19,5 @@ app.all("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Server started");
+  console.log(`Server started on port ${process.env.PORT}`);
 });
