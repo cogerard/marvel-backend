@@ -10,7 +10,7 @@ router.get("/comics", async (req, res) => {
     if (req.query.title) {
       endOfUrl = endOfUrl + "&title=" + req.query.title;
     }
-    if (req.query.page && Number.isInteger(page) === true) {
+    if (req.query.page && Number.isInteger(req.query.page) === true) {
       let skip = 100 * req.query.page;
       endOfUrl = endOfUrl + "&skip=" + skip;
     }
