@@ -10,7 +10,7 @@ router.get("/characters", async (req, res) => {
     if (req.query.name) {
       endOfUrl = endOfUrl + "&name=" + req.query.name;
     }
-    if (req.query.page && Number.isInteger(page)) {
+    if (req.query.page) {
       let skip = 100 * req.query.page;
       endOfUrl = endOfUrl + "&skip=" + skip;
     }
