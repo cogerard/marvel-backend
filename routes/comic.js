@@ -7,8 +7,8 @@ const axios = require("axios");
 router.get("/comics", async (req, res) => {
   try {
     let endOfUrl = "";
-    if (req.query.name) {
-      endOfUrl = endOfUrl + "&name=" + req.query.name;
+    if (req.query.title) {
+      endOfUrl = endOfUrl + "&title=" + req.query.title;
     }
     if (req.query.page && Number.isInteger(page) === true) {
       let skip = 100 * req.query.page;
